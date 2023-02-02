@@ -349,10 +349,7 @@ html {
   display: flex;
   gap: 24px;
 }
-.icon-item {
-  width: 40px;
-  height: 40px;
-}
+
 .member-icon-link {
   width: 40px;
   height: 40px;
@@ -363,7 +360,8 @@ html {
   border-radius: 50%;
   cursor: pointer;
 }
-.member-icon-link:hover {
+.member-icon-link:hover,
+.member-icon-link:focus {
   background-color: var(--portfolio-btn-active);
 }
 .member-icon {
