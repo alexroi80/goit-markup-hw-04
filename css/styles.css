@@ -7,6 +7,7 @@
   --backgroung-section-last: #8e8f99;
   --footer-text: #e7e9fc;
   --portfolio-btn-active: #404bbf;
+  --success-messages-color: #31d0aa;
   --container-width: 1158px;
   --section-padding-top-bottom: 120px;
   --container-padding-left: 15px;
@@ -23,9 +24,6 @@ html {
 }
 
 .page {
-  width: 100%;
-  max-width: 1440px;
-
   font-family: 'Roboto', sans-serif;
   letter-spacing: 0.02em;
 
@@ -177,6 +175,11 @@ html {
   border-radius: 50%;
   cursor: pointer;
 }
+.media-item-link:hover,
+.media-item-link:focus {
+  background-color: var(--success-messages-color);
+}
+
 .media-icon {
   width: 24px;
   height: 24px;
@@ -194,6 +197,9 @@ html {
 }
 /* Hero */
 .section.hero {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
   padding-top: 188px;
   padding-bottom: 188px;
   color: var(--background-color-main);
@@ -489,10 +495,14 @@ html {
 .project-item-link {
   display: block;
   text-decoration: none;
+  border: 1px solid var(--footer-text);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
   cursor: pointer;
 }
-.project-item-link:hover {
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+.project-item-link:hover{
+  border: 0.5px solid var(--background-color-secondary);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .project-item-name {
@@ -518,7 +528,4 @@ html {
 .wrapper {
   padding-top: var(--portfolio-card-padding);
   padding-bottom: var(--portfolio-card-padding);
-  border-left: 1px solid var(--footer-text);
-  border-right: 1px solid var(--footer-text);
-  border-bottom: 1px solid var(--footer-text);
 }
